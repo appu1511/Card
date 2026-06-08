@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: #f5f1ed;
+  color: #2c2c2c;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f1ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffa500;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9500;
+}
+
+/* Floating petals animation */
+@keyframes float-petals {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.floating-petal {
+  animation: float-petals linear infinite;
+  position: fixed;
+  pointer-events: none;
+}
+
+/* Glass morphism effect */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Handwritten style */
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2em;
+}
+
+/* Typewriter effect */
+.typewriter-text {
+  overflow: hidden;
+  display: inline-block;
+  border-right: 3px solid #ffa500;
+  white-space: nowrap;
+}
+
+/* Stamp effect */
+.stamp {
+  position: relative;
+  transform: rotate(-15deg);
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff4444;
+  border: 3px dashed #ff4444;
+  padding: 5px 15px;
+  display: inline-block;
+}
+
+/* Scrapbook element */
+.scrapbook-element {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 3px dashed #fff9e6;
+}
+
+/* Loading animation */
+.loader {
+  border: 4px solid #fff9e6;
+  border-top: 4px solid #ffa500;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
